@@ -1,25 +1,27 @@
-# Bitcoin Mempool App
+# Bitcoin Mempool App by CuseTheJuice
 
-A Next.js application for real-time inspection of the Bitcoin mempool, displaying transaction details and mempool statistics. Built with Tailwind CSS and DaisyUI for a responsive and modern UI.
+A Next.js application for real-time inspection of the Bitcoin mempool, displaying transaction details and mempool statistics. Built with Tailwind CSS and DaisyUI for a responsive, modern, and accessible user interface.
+
+**[Live Demo](https://bitcoin-mempool-app.vercel.app/)**: Explore the production version of the app.
 
 ## Features
 
-- **Real-Time Mempool Data**: Displays mempool statistics including transaction count, total fees, and mempool size (in MB), updated every 30 seconds.
-- **Transaction Search**: Search for specific Bitcoin transactions by TXID, with detailed views in a popup window.
-- **Transaction History**: Tracks recent mempool transactions and manual searches, with sorting and filtering by status (pending/confirmed) and source (e.g., Local Bitcoin Node, Mempool.space).
-- **Detailed Transaction Insights**: Includes fee, size, fee rate (sat/vB), status, confirmations, wallet type, witness data, inputs/outputs, and OP_RETURN data.
-- **Error Handling**: Robust error handling with user-friendly messages, status codes, and source information using React ErrorBoundary.
-- **Persistent History**: Stores transaction history in `localStorage` for persistence across sessions, with an option to clear history.
+- **Real-Time Mempool Data**: Displays mempool statistics (transaction count, total fees, and size in MB), updated every 30 seconds.
+- **Transaction Search**: Search for Bitcoin transactions by TXID, with detailed views in a popup window.
+- **Transaction History**: Tracks recent mempool transactions (up to 10 per fetch) and manual searches, with sorting and filtering by status (pending/confirmed) and source (e.g., Local Bitcoin Node, Mempool.space).
+- **Detailed Transaction Insights**: Includes fee, size, fee rate (sat/vB), status, confirmations, wallet type, witness data, inputs/outputs, version, locktime, block height, and OP_RETURN data.
+- **Error Handling**: Robust error handling with user-friendly messages, status codes, and source information using React `ErrorBoundary`.
+- **Persistent History**: Stores transaction history in `localStorage` for persistence across sessions (up to 20 transactions), with an option to clear history.
 - **Interactive UI**: Features refresh buttons, loading states, and a popup window for transaction details with refresh and close options.
 - **Responsive Design**: Styled with Tailwind CSS and DaisyUI for a clean, accessible, and mobile-friendly interface.
 
 ## Tech Stack
 
-- **Framework**: Next.js (React)
+- **Framework**: Next.js (React, client-side rendering with `'use client'`)
 - **State Management**: React Hooks (`useState`, `useEffect`)
 - **Styling**: Tailwind CSS, DaisyUI
-- **Error Handling**: React ErrorBoundary
-- **Data Fetching**: Fetch API for interacting with Bitcoin node or Mempool.space API
+- **Error Handling**: React `ErrorBoundary`
+- **Data Fetching**: Fetch API for interacting with a Bitcoin node or Mempool.space API
 - **Storage**: `localStorage` for transaction history
 - **Type Safety**: TypeScript with interfaces for mempool stats, transaction data, and error states
 
