@@ -1,0 +1,1 @@
+/home/cuse/.nvm/versions/node/v22.6.0/bin/npm run dev
